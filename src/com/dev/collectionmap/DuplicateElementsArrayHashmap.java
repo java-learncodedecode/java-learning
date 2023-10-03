@@ -37,14 +37,16 @@ public class DuplicateElementsArrayHashmap {
 	}
 	//ing java8
 	private static void findDuplicatesUsingJava8(int[] inputArray) 
+	
 	{   
-	    Set<Integer> uniqueElements = new HashSet<>();
+		String [] inputArray1 = {"abc", "def", "abc","def","cde"};
+	    Set<String> uniqueElements = new HashSet<>();
 	         
-	    Set<Integer> duplicateElements =  Arrays.stream(inputArray)
+	    Set<String> duplicateElements =  Arrays.stream(inputArray1)
 	                                            .filter(i -> !uniqueElements.add(i))
-	                                            .boxed()
+	                                           // .boxed() used for Integer
 	                                            .collect(Collectors.toSet());
-	         
+	    //duplicateElements.forEach(System.out::println);
 	    System.out.println(duplicateElements);
 	}
 }
