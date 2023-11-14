@@ -4,7 +4,7 @@ package com.dev.arrays;
 public class LeaderElement {
 
 	public static void main(String[] args) {
-		int arr[] = { 14, 12, 70, 15, 99, 65, 21, 90 };
+		int arr[] = { 14, 12, 70, 15, 9, 65, 21, 10 };
 		findLeadersInAnArray(arr);
 	}
 

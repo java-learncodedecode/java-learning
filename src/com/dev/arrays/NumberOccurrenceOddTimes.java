@@ -5,7 +5,7 @@ import java.util.Map.Entry;
 
 public class NumberOccurrenceOddTimes {
 	public static void main(String[] args) {
-		int array[] = new int[] { 20, 40, 50, 40, 50, 20, 30, 30, 50, 20, 40, 40, 20 };
+		int array[] = new int[] { 20, 40, 50, 40, 50, 20, 30, 30, 50, 20, 30, 40, 20 };
 		System.out.println("Number which occurs odd number of times is : " + getOddTimesElementHashing(array));
 	}
 

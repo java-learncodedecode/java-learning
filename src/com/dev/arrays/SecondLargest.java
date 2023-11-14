@@ -13,8 +13,6 @@ public class SecondLargest {
 		// Initialize these to the smallest value possible
 		int highest = Integer.MIN_VALUE;
 		int secondHighest = Integer.MIN_VALUE;
-		System.out.println(highest);
-		System.out.println(secondHighest);
 
 		// Loop over the array
 		for (int i = 0; i < array.length; i++) {
