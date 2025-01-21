@@ -1,1 +1,35 @@
+Sales Table
+
+Product   Month    Sales
+A          Jan      100
+A          Feb      150
+B          Jan      120
+B          Feb      140
+
+Desired OutPut
+Product Jan Feb
+A       100 150
+B       120 140
+
+
+Query:
+
+SELECT 
+   product,
+   MAX(CASE WHEN month = 'Jan' THEN sales ELSE 0 END) AS Jan, 
+   MAX(CASE WHEN month = 'Feb' THEN sales ELSE 0 END) AS Feb 
+FROM 
+   sales_table 
+GROUP BY 
+   product;
+
+
+
+
+
+
+
+
+
+
 
