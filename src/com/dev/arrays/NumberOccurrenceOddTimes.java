@@ -1,15 +1,16 @@
 package com.dev.arrays;
 
 import java.util.HashMap;
+import java.util.*;
 import java.util.Map.Entry;
 
-public class NumberOccurrenceOddTimes {
+class Main {
 	public static void main(String[] args) {
-		int array[] = new int[] { 20, 40, 50, 40, 50, 20, 30, 30, 50, 20, 30, 40, 20 };
+		int array[] = new int[] { 20, 40, 20, 50, 40, 50, 20, 30, 30, 50, 20, 30, 40, 20 };
 		System.out.println("Number which occurs odd number of times is : " + getOddTimesElementHashing(array));
 	}
 
-	static int getOddTimesElementHashing(int ar[]) {
+	static List<Integer> getOddTimesElementHashing(int ar[]) {
 		int i;
 
 		HashMap<Integer, Integer> elements = new HashMap<Integer, Integer>();
@@ -20,11 +21,12 @@ public class NumberOccurrenceOddTimes {
 			} else
 				elements.put(element, elements.get(element) + 1);
 		}
+		List<Integer> list = new ArrayList<>();
 		for (Entry<Integer, Integer> entry : elements.entrySet()) {
 			if (entry.getValue() % 2 == 1) {
-				return entry.getKey();
+			    list.add(entry.getKey());
 			}
 		}
-		return -1;
+		return list;
 	}
 }
